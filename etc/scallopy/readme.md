@@ -38,10 +38,18 @@ $ conda create --name scallop-lab python=3.8 # change the name to whatever you w
 $ conda activate scallop-lab
 ```
 
+NOTE(RFM): Use Conda.
+
 And let's install the core dependencies
 
 ``` bash
 $ pip install maturin
+```
+
+NOTE(RFM): Install with Conda instead to ensure the correct architecture:
+
+```bash
+$ conda install maturin
 ```
 
 With this, we can build our `scallopy` library
@@ -50,6 +58,12 @@ With this, we can build our `scallopy` library
 $ cd etc/scallopy # Go to this directory
 $ make            # Build the library
 $ cd ../..        # Going back to the root `scallop` directory
+```
+
+NOTE(RFM): And then pip-install the wheel:
+
+```bash
+$ pip3 install /path/to/wheel.whl # 
 ```
 
 If succeed, please run some examples just to confirm that `scallopy` is indeed installed successfully.
