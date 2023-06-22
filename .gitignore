@@ -13,3 +13,7 @@ __pycache__
 
 # Scallop
 *.sclcmpl
+
+# Experiments
+/experiments/data
+/experiments/model
