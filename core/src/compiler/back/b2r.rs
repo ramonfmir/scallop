@@ -123,7 +123,7 @@ impl Program {
 
       // Get the negative dataflows that can be computed at this stratum
       let curr_neg_dfs = negative_dataflows
-        .drain_filter(|ndf| ndf.sources.is_subset(&accumulated_sources))
+        .extract_if(|ndf| ndf.sources.is_subset(&accumulated_sources))
         .collect::<Vec<_>>();
 
       // Add the negative dataflow into the stratum

@@ -1,5 +1,5 @@
 #![feature(min_specialization)]
-#![feature(drain_filter)]
+#![feature(extract_if)]
 
 pub mod common;
 pub mod compiler;
